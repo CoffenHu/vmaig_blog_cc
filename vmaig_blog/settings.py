@@ -91,12 +91,26 @@ SUIT_CONFIG = {
     'MENU': (
         {'label': u'博客管理', 'icon': 'icon-folder-open', 'models': (
             {'model': 'blog.Nav', 'label': u'导航条'},
-            {'model': 'project.project', 'label': u'单位工程'},
+            {'model': 'blog.Category', 'label': u'分类管理'},
+            {'model': 'blog.Article', 'label': u'文章管理'},
+            {'model': 'blog.Column', 'label': u'专栏管理'},
+            {'model': 'blog.Carousel', 'label': u'轮播管理'},
+            {'model': 'blog.News', 'label': u'资讯管理'},
         )},
-        # # # {'app': 'engine', 'label': u'文件中心', 'icon': 'icon-file',},
-        # {'label': u'文件管理', 'icon': 'icon-file', 'models': (
-        #     {'model': 'engine.autocadfile', 'label': u'图纸管理'},
-        # )},
+        # # {'app': 'engine', 'label': u'文件中心', 'icon': 'icon-file',},
+        {'label': u'评论管理', 'icon': 'icon-file', 'models': (
+            {'model': 'vmaig_comments.Comment', 'label': u'评论管理'},
+        )},
+
+        {'label': u'权限管理', 'icon': 'icon-file', 'models': (
+            {'model': 'vmaig_auth.VmaigUser', 'label': u'用户管理'},
+        )},
+
+        {'label': u'系统管理', 'icon': 'icon-file', 'models': (
+            {'model': 'vmaig_system.Notification', 'label': u'用户管理'},
+            {'model': 'vmaig_system.Link', 'label': u'友情链接'},
+        )},
+
         # #
         # # {'app': 'workload', 'label': u'预算管理', 'icon': 'icon-tasks',},
         # #

@@ -50,3 +50,8 @@ class Link(models.Model):
     class Meta:
         verbose_name_plural = verbose_name = u'友情链接'
         ordering = ['-create_time']
+
+    def __str__(self):
+        return self.title
+
+    __unicode__ = __str__
